@@ -1,4 +1,3 @@
-Suryatej Solar website - V3
-Upload all files in this folder to the GitHub repository root.
-Cloudflare Pages will redeploy automatically from main.
-Original Suryatej Solar emblem is in logo.png.
+SURYATEJ SOLAR V5 FINAL
+IMPORTANT: The file suryatej-7-horses-logo.png is the exact 7-horses Surya image supplied by the customer.
+Upload ALL files together to GitHub and replace the old index.html.
