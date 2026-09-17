@@ -3,141 +3,383 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suryatej Solar | Clean Solar Energy</title>
-  <meta name="description" content="Suryatej Solar - reliable solar solutions for homes, businesses and industries.">
-  <link rel="stylesheet" href="style.css">
+  <title>Suryatej Solar | Solar Solutions for Better Tomorrow</title>
+  <meta name="description" content="Suryatej Solar provides residential, commercial, industrial, on-grid and hybrid solar solutions with professional installation and maintenance.">
+  <style>
+    :root{
+      --green:#16a34a;
+      --green2:#0f8f43;
+      --blue:#0b2d5c;
+      --yellow:#f5b800;
+      --light:#f5faf7;
+      --text:#17324d;
+      --muted:#64748b;
+      --white:#fff;
+      --shadow:0 12px 35px rgba(11,45,92,.10);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+
+    header{
+      position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);
+      border-bottom:1px solid #e8eef3;backdrop-filter:blur(8px)
+    }
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:58px;height:58px;object-fit:contain}
+    .brand-text strong{display:block;font-size:22px;color:var(--blue);letter-spacing:1px}
+    .brand-text span{font-size:12px;color:var(--green);font-weight:700;letter-spacing:.5px}
+    nav{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:700}
+    nav a:hover{color:var(--green)}
+    .top-contact{display:flex;align-items:center;gap:10px;font-size:13px}
+    .wa{color:#168b46;font-weight:700}
+    .menu{display:none;border:0;background:none;font-size:28px;cursor:pointer}
+
+    .hero{padding:55px 0 30px;background:linear-gradient(180deg,#fff,#f4fbf7)}
+    .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:42px;align-items:center}
+    .eyebrow{color:var(--green);font-size:13px;font-weight:800;letter-spacing:2px;margin-bottom:10px}
+    .hero h1{font-size:clamp(40px,6vw,70px);line-height:1.02;color:var(--blue);letter-spacing:-2px}
+    .hero h1 span{color:var(--green)}
+    .tagline{font-size:24px;font-weight:800;color:var(--yellow);margin:16px 0 8px}
+    .hero p{color:var(--muted);font-size:17px;max-width:580px}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .btn{display:inline-block;padding:13px 20px;border-radius:999px;font-weight:800;font-size:14px;border:2px solid transparent}
+    .btn-primary{background:var(--green);color:white}
+    .btn-primary:hover{background:var(--green2)}
+    .btn-outline{border-color:var(--green);color:var(--green)}
+    .btn-dark{background:var(--blue);color:white}
+    .hero-photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:#dff4e7}
+    .hero-photo img{width:100%;height:390px;object-fit:cover}
+
+    .quick{padding:15px 0 35px}
+    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .quick-card{padding:18px;border:1px solid #e7edf1;border-radius:14px;background:white}
+    .quick-card b{display:block;color:var(--blue);font-size:14px}
+    .quick-card span{color:var(--muted);font-size:12px}
+
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 38px}
+    .section-head small{color:var(--green);font-weight:800;letter-spacing:2px}
+    .section-head h2{font-size:36px;color:var(--blue);margin:8px 0}
+    .section-head p{color:var(--muted)}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{padding:26px;border:1px solid #e6edf0;border-radius:var(--radius);box-shadow:0 8px 22px rgba(11,45,92,.05);background:white}
+    .icon{font-size:30px;margin-bottom:12px}
+    .card h3{color:var(--blue);margin-bottom:7px}
+    .card p{color:var(--muted);font-size:14px}
+
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-box{padding:32px;border-radius:22px;background:white;box-shadow:var(--shadow)}
+    .about-box h2{color:var(--blue);font-size:35px;margin-bottom:14px}
+    .about-box p{color:var(--muted);margin-bottom:12px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+    .stat{padding:18px;border-radius:15px;background:#eef9f2;text-align:center}
+    .stat b{font-size:25px;color:var(--green);display:block}
+    .stat span{font-size:12px;color:var(--muted)}
+
+    .why-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .why{display:flex;gap:13px;padding:20px;border:1px solid #e7edf1;border-radius:15px}
+    .why b{color:var(--blue)}
+    .why p{font-size:13px;color:var(--muted)}
+
+    .projects{background:var(--light)}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{overflow:hidden;border-radius:18px;background:white;box-shadow:var(--shadow)}
+    .project img{height:220px;width:100%;object-fit:cover}
+    .project div{padding:18px}
+    .project h3{color:var(--blue)}
+    .project p{color:var(--muted);font-size:13px}
+
+    .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .person{padding:24px;border:1px solid #e4ebef;border-radius:20px;display:flex;gap:20px;align-items:center;background:white;box-shadow:var(--shadow)}
+    .person-photo{width:130px;height:150px;border-radius:16px;object-fit:cover}
+    .person h3{color:var(--blue);font-size:20px;margin-bottom:7px}
+    .person a{display:block;color:var(--green);font-weight:700;margin:3px 0}
+
+    .offices{background:var(--light)}
+    .office-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .office{padding:28px;border-radius:20px;background:white;border:1px solid #e3ebef}
+    .office h3{color:var(--blue);margin-bottom:8px}
+    .office p{color:var(--muted)}
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .contact-box{padding:30px;border-radius:20px;background:var(--blue);color:white}
+    .contact-box h2{font-size:32px;margin-bottom:12px}
+    .contact-box p{color:#dbe8f5}
+    .contact-link{display:inline-block;margin-top:15px;color:#fff;font-weight:800}
+    form{padding:28px;border:1px solid #e4ebef;border-radius:20px;box-shadow:var(--shadow)}
+    input,textarea{width:100%;padding:13px 14px;margin-bottom:12px;border:1px solid #d8e1e7;border-radius:10px;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    button{cursor:pointer}
+
+    footer{background:#071d39;color:#d9e5ef;padding:35px 0;text-align:center}
+    footer strong{color:white}
+    footer p{font-size:13px;margin-top:6px}
+
+    @media(max-width:900px){
+      nav,.top-contact{display:none}
+      .menu{display:block}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-photo img{height:300px}
+      .cards,.project-grid{grid-template-columns:1fr 1fr}
+      .quick-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+      .brand img{width:48px;height:48px}
+      .brand-text strong{font-size:18px}
+      .hero{padding-top:35px}
+      .hero h1{font-size:43px}
+      .tagline{font-size:19px}
+      .cards,.project-grid,.team-grid,.office-grid,.why-list,.quick-grid{grid-template-columns:1fr}
+      .person{align-items:flex-start}
+      .person-photo{width:105px;height:125px}
+      section{padding:58px 0}
+      .section-head h2{font-size:30px}
+    }
+  </style>
 </head>
+
 <body>
-<header class="header">
-  <a class="brand" href="#home" aria-label="Suryatej Solar home">
-    <img class="brand-logo" src="logo.png" alt="Suryatej Solar logo">
-  </a>
-  <button class="menu" aria-label="Open menu">☰</button>
-  <nav>
-    <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a>
-    <a href="#projects">Projects</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
-  </nav>
-  <div class="top-contact">
-    <a href="tel:+910000000000">📞 +91 XXXXX XXXXX</a>
-    <a class="wa" href="https://wa.me/910000000000">WhatsApp</a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Suryatej Solar Home">
+      <img src="logo.png" alt="Suryatej Solar Logo">
+      <div class="brand-text">
+        <strong>SURYATEJ SOLAR</strong>
+        <span>Solar Solutions for Better Tomorrow</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#why">Why Us</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="top-contact">
+      <a href="tel:+919553188844">📞 9553188844</a>
+      <a class="wa" href="https://wa.me/918179048933" target="_blank">WhatsApp</a>
+    </div>
+    <button class="menu" onclick="alert('Please use the menu links on the page.')">☰</button>
   </div>
 </header>
 
 <main>
-<section id="home" class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">SOLAR SOLUTIONS FOR BETTER TOMORROW</p>
-    <h1><span>SURYATEJ</span> SOLAR</h1>
-    <h2>Power Your Future with <em>Clean Solar Energy</em></h2>
-    <p>Reliable solar solutions for homes, businesses & industries.</p>
-    <div class="actions">
-      <a class="btn primary" href="#contact">Get Free Quote →</a>
-      <a class="btn light" href="https://wa.me/910000000000">WhatsApp Us</a>
-      <a class="btn dark" href="#video">▶ Watch Video</a>
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">CLEAN ENERGY • BRIGHTER TOMORROW</div>
+        <h1>SURYATEJ <span>SOLAR</span></h1>
+        <div class="tagline">Solar Solutions for Better Tomorrow</div>
+        <p>Reliable solar solutions for homes, businesses and industries — designed for clean energy, savings and long-term performance.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contact">Get Free Quote →</a>
+          <a class="btn btn-outline" href="https://wa.me/918179048933?text=Hello%20Suryatej%20Solar%2C%20I%20need%20a%20solar%20quotation." target="_blank">WhatsApp Us</a>
+          <a class="btn btn-dark" href="#video">▶ Watch Video</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85" alt="Solar panels producing clean energy">
+      </div>
+    </div>
+  </section>
+
+  <div class="quick">
+    <div class="container quick-grid">
+      <div class="quick-card">☀️ <b>Clean Energy</b><span>For a greener tomorrow</span></div>
+      <div class="quick-card">💰 <b>Save Money</b><span>Reduce your electricity bill</span></div>
+      <div class="quick-card">⚡ <b>Energy Independence</b><span>Power your future</span></div>
+      <div class="quick-card">🛡️ <b>Reliable & Long Lasting</b><span>Built for performance</span></div>
     </div>
   </div>
-  <div class="hero-art" aria-label="Solar panels illustration">
-    <div class="sun">☀</div>
-    <div class="mountain"></div>
-    <div class="panel"></div>
-    <div class="play" id="video">▶</div>
-    <p>Solar energy for a brighter tomorrow</p>
-  </div>
-</section>
 
-<section class="benefits">
-  <div>🌿 <b>Clean Energy</b><small>For a greener tomorrow</small></div>
-  <div>💰 <b>Save Money</b><small>Reduce your electricity bill</small></div>
-  <div>⚡ <b>Energy Independence</b><small>Power your life</small></div>
-  <div>🛡️ <b>Reliable & Long Lasting</b><small>Built for performance</small></div>
-</section>
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <small>OUR SERVICES</small>
+        <h2>Solar Solutions for Every Need</h2>
+        <p>End-to-end solar solutions with quality products, professional installation and dependable support.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">🏠</div><h3>Residential Solar</h3><p>Solar power solutions for homes to reduce electricity costs and increase energy independence.</p></article>
+        <article class="card"><div class="icon">🏢</div><h3>Commercial Solar</h3><p>Efficient solar systems for shops, offices and commercial buildings.</p></article>
+        <article class="card"><div class="icon">🏭</div><h3>Industrial Solar</h3><p>High-capacity solar solutions for industrial and large-scale energy requirements.</p></article>
+        <article class="card"><div class="icon">⚡</div><h3>On-Grid Solar</h3><p>Grid-connected solar systems designed for dependable daytime power generation.</p></article>
+        <article class="card"><div class="icon">🔋</div><h3>Hybrid Solar</h3><p>Solar plus battery solutions for additional backup and energy management.</p></article>
+        <article class="card"><div class="icon">🔧</div><h3>Installation & Maintenance</h3><p>Professional installation, inspection, maintenance and support for solar systems.</p></article>
+      </div>
+    </div>
+  </section>
 
-<section id="services" class="section">
-  <p class="eyebrow center">OUR SERVICES</p>
-  <h2 class="section-title">Solar Solutions for Every Need</h2>
-  <p class="section-lead">End-to-end solar solutions with quality products, expert installation and dependable support.</p>
-  <div class="cards">
-    <article><span>🏠</span><h3>Residential Solar</h3><p>Power your home with clean and affordable energy.</p></article>
-    <article><span>🏢</span><h3>Commercial Solar</h3><p>Smart solar systems for offices, shops and businesses.</p></article>
-    <article><span>🏭</span><h3>Industrial Solar</h3><p>High-capacity solutions for large-scale industries.</p></article>
-    <article><span>⚡</span><h3>On-Grid Solar</h3><p>Stay connected with the grid while generating clean power.</p></article>
-    <article><span>🔋</span><h3>Hybrid Solar</h3><p>Solar plus battery backup for uninterrupted power.</p></article>
-    <article><span>🔧</span><h3>Installation & Maintenance</h3><p>Professional service and long-term technical support.</p></article>
-  </div>
-</section>
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="about-box">
+        <small style="color:#16a34a;font-weight:800;letter-spacing:2px">ABOUT US</small>
+        <h2>Powering a Better Tomorrow</h2>
+        <p><strong>SURYATEJ SOLAR</strong> is focused on practical and reliable solar energy solutions for residential, commercial and industrial customers.</p>
+        <p>From system selection and installation to maintenance, our goal is to make the transition to clean solar energy simple and dependable.</p>
+        <div class="stats">
+          <div class="stat"><b>6+</b><span>Solar Solutions</span></div>
+          <div class="stat"><b>3</b><span>Customer Segments</span></div>
+          <div class="stat"><b>24/7</b><span>Enquiry Access</span></div>
+        </div>
+      </div>
+      <div>
+        <img style="border-radius:22px;box-shadow:var(--shadow);width:100%;height:420px;object-fit:cover"
+          src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1000&q=85"
+          alt="Solar energy and sustainable power">
+      </div>
+    </div>
+  </section>
 
-<section id="about" class="about">
-  <div class="about-art"><div class="mini-panel"></div><div class="leaf-badge">Clean Energy<br>Brighter Future</div></div>
-  <div>
-    <p class="eyebrow">ABOUT US</p>
-    <h2>Welcome to Suryatej Solar</h2>
-    <p>We provide clean, renewable and cost-effective solar energy solutions for residential, commercial and industrial customers. Replace this paragraph with your official company profile.</p>
-    <div class="stats"><div><b>10+</b><small>Years Experience</small></div><div><b>1000+</b><small>Happy Customers</small></div><div><b>5+</b><small>Service Locations</small></div></div>
-    <a class="btn primary" href="#contact">Know More About Us →</a>
-  </div>
-</section>
+  <section id="why">
+    <div class="container">
+      <div class="section-head">
+        <small>WHY CHOOSE US</small>
+        <h2>Focused on Quality Solar Service</h2>
+        <p>Clear communication, professional installation and dependable after-sales support.</p>
+      </div>
+      <div class="why-list">
+        <div class="why"><span>✓</span><div><b>Quality-focused solutions</b><p>We select solutions according to the customer's energy requirement.</p></div></div>
+        <div class="why"><span>✓</span><div><b>Professional installation</b><p>Careful installation and system setup for reliable operation.</p></div></div>
+        <div class="why"><span>✓</span><div><b>Transparent guidance</b><p>We explain system options and requirements clearly.</p></div></div>
+        <div class="why"><span>✓</span><div><b>Maintenance support</b><p>Support for inspection, maintenance and service requirements.</p></div></div>
+      </div>
+    </div>
+  </section>
 
-<section id="why" class="why">
-  <p class="eyebrow center">WHY CHOOSE US</p>
-  <h2 class="section-title">Why Choose Suryatej Solar?</h2>
-  <div class="why-grid">
-    <div>✓<b>Quality Products</b><span>Top brands & certified equipment.</span></div>
-    <div>✓<b>Professional Installation</b><span>Skilled and experienced technicians.</span></div>
-    <div>✓<b>Maximum Savings</b><span>Designed for efficient energy generation.</span></div>
-    <div>✓<b>Reliable Service</b><span>Dedicated customer support.</span></div>
-    <div>✓<b>After-Sales Support</b><span>Long-term service and maintenance.</span></div>
-  </div>
-</section>
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-head">
+        <small>OUR PROJECTS</small>
+        <h2>Solar Projects</h2>
+        <p>Residential, commercial and industrial solar applications.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Residential solar panels">
+          <div><h3>Residential Solar</h3><p>Clean solar power for homes and families.</p></div>
+        </article>
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80" alt="Commercial solar project">
+          <div><h3>Commercial Solar</h3><p>Energy solutions for businesses and commercial spaces.</p></div>
+        </article>
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Large solar energy project">
+          <div><h3>Large Solar Solutions</h3><p>Scalable solutions for larger energy requirements.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section id="projects" class="section">
-  <p class="eyebrow">OUR PROJECTS</p><h2 class="section-title left">Trusted Solar Installations</h2>
-  <div class="projects">
-    <div class="project p1"><b>Residential</b><span>Project photo placeholder</span></div>
-    <div class="project p2"><b>Commercial</b><span>Project photo placeholder</span></div>
-    <div class="project p3"><b>Industrial</b><span>Project photo placeholder</span></div>
-    <div class="project p4"><b>Ground Mounted</b><span>Project photo placeholder</span></div>
-  </div>
-</section>
+  <section id="video">
+    <div class="container">
+      <div class="section-head">
+        <small>WATCH VIDEO</small>
+        <h2>Suryatej Solar</h2>
+        <p>Our YouTube video link can be added here.</p>
+        <a class="btn btn-dark" href="#" onclick="alert('YouTube video link will be added here.')">▶ Watch Solar Video</a>
+      </div>
+    </div>
+  </section>
 
-<section class="people section">
-  <p class="eyebrow center">OUR TEAM</p><h2 class="section-title">Meet Our Team</h2>
-  <div class="people-grid">
-    <article class="person"><div class="photo">PHOTO 1</div><h3>Person Name 1</h3><a href="tel:+910000000000">📞 +91 XXXXX XXXXX</a></article>
-    <article class="person"><div class="photo">PHOTO 2</div><h3>Person Name 2</h3><a href="tel:+910000000000">📞 +91 XXXXX XXXXX</a></article>
-  </div>
-  <p class="note">Replace the two names, photos and phone numbers with your official details.</p>
-</section>
+  <section id="team">
+    <div class="container">
+      <div class="section-head">
+        <small>OUR TEAM</small>
+        <h2>Contact Our Team</h2>
+        <p>Contact us for a solar requirement, site visit or quotation.</p>
+      </div>
+      <div class="team-grid">
+        <article class="person">
+          <img class="person-photo" src="person1.jpg" alt="గుడివాడ అప్పారావు">
+          <div>
+            <h3>గుడివాడ అప్పారావు</h3>
+            <a href="tel:+919553188844">📞 9553188844</a>
+            <p style="color:#64748b;font-size:13px">Head Office – Chodavaram</p>
+          </div>
+        </article>
+        <article class="person">
+          <img class="person-photo" src="person2.jpeg" alt="గోతిరెడ్డి సురేంద్ర">
+          <div>
+            <h3>గోతిరెడ్డి సురేంద్ర</h3>
+            <a href="tel:+919392557595">📞 9392557595</a>
+            <p style="color:#64748b;font-size:13px">Branch Office – Samarlakota</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section class="offices section">
-  <p class="eyebrow">OUR OFFICES</p><h2 class="section-title left">Visit Our Offices</h2>
-  <div class="office-grid">
-    <article><span>📍</span><h3>Head Office</h3><p>Office address goes here<br>City, State, PIN</p><a href="#contact">Get Directions →</a></article>
-    <article><span>📍</span><h3>Branch Office</h3><p>Second office address goes here<br>City, State, PIN</p><a href="#contact">Get Directions →</a></article>
-  </div>
-  <p class="note">Replace these two placeholders with your exact office addresses and map links.</p>
-</section>
+  <section class="offices">
+    <div class="container">
+      <div class="section-head">
+        <small>OUR OFFICES</small>
+        <h2>Visit Suryatej Solar</h2>
+      </div>
+      <div class="office-grid">
+        <div class="office">
+          <h3>📍 Head Office – Chodavaram</h3>
+          <p>Door No. 18-57/3<br>Walkers Hall ఎదురుగా<br>Lakshmipuram Road, Chodavaram<br>Anakapalli District – 531036</p>
+        </div>
+        <div class="office">
+          <h3>📍 Branch Office – Samarlakota</h3>
+          <p>Main Road, Post Office Opp. Line<br>D.No: 11-2-3/4<br>Gayitri Xerox Shop<br>Samarlakota</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="contact">
-  <div><p class="eyebrow">GET STARTED TODAY</p><h2>Start Saving on Your Electricity Bill Today!</h2><p>Tell us about your solar requirement and our team will contact you.</p></div>
-  <form onsubmit="event.preventDefault(); alert('Thank you! Please connect this form to your preferred email/CRM before publishing.');">
-    <input required placeholder="Your Name"><input required type="tel" placeholder="Phone Number">
-    <input type="email" placeholder="Your Email"><select><option>Service Required</option><option>Residential Solar</option><option>Commercial Solar</option><option>Industrial Solar</option></select>
-    <textarea placeholder="Your Message"></textarea><button class="btn primary" type="submit">Send Enquiry →</button>
-  </form>
-</section>
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-box">
+        <h2>Get Your Solar Quote</h2>
+        <p>Tell us about your home, business or industrial solar requirement. We will contact you.</p>
+        <a class="contact-link" href="tel:+919553188844">📞 Call: 9553188844</a><br>
+        <a class="contact-link" href="https://wa.me/918179048933" target="_blank">💬 WhatsApp: 8179048933</a>
+      </div>
+
+      <form onsubmit="sendEnquiry(event)">
+        <h3 style="color:#0b2d5c;font-size:24px;margin-bottom:15px">Free Enquiry</h3>
+        <input id="name" type="text" placeholder="Your Name" required>
+        <input id="phone" type="tel" placeholder="Mobile Number" required>
+        <input id="requirement" type="text" placeholder="Solar Requirement (e.g. 3KW Home)">
+        <textarea id="message" placeholder="Message"></textarea>
+        <button class="btn btn-primary" type="submit">Send Enquiry →</button>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <div class="footer-brand"><img class="footer-logo" src="logo.png" alt="Suryatej Solar logo"></div>
-  <div><b>Call</b><a href="tel:+910000000000">+91 XXXXX XXXXX</a></div>
-  <div><b>WhatsApp</b><a href="https://wa.me/910000000000">+91 XXXXX XXXXX</a></div>
-  <div><b>Email</b><a href="mailto:info@suryatejsolar.com">info@suryatejsolar.com</a></div>
-  <div><b>Office</b><span>Address to be updated</span></div>
-  <div class="copyright">© 2026 Suryatej Solar. All Rights Reserved.</div>
+  <div class="container">
+    <strong>SURYATEJ SOLAR</strong>
+    <p>Solar Solutions for Better Tomorrow</p>
+    <p>© 2026 Suryatej Solar. All Rights Reserved.</p>
+  </div>
 </footer>
+
 <script>
-const menu=document.querySelector('.menu'), nav=document.querySelector('nav');
-menu.addEventListener('click',()=>nav.classList.toggle('open'));
+function sendEnquiry(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const req = document.getElementById('requirement').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  const text = `Hello Suryatej Solar,%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0ARequirement: ${encodeURIComponent(req)}%0AMessage: ${encodeURIComponent(msg)}`;
+  window.open('https://wa.me/918179048933?text=' + text, '_blank');
+}
 </script>
 </body>
 </html>
