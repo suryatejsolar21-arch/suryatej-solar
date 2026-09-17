@@ -2,301 +2,64 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Suryatej Solar | Solar Solutions for Better Tomorrow</title>
-<meta name="description" content="Suryatej Solar provides residential, commercial, industrial, on-grid, hybrid solar and installation services.">
 <style>
-:root{
-  --green:#159447;--dark:#082b49;--yellow:#f7c928;--light:#f5faf7;
-  --text:#183047;--muted:#617286;--white:#fff;--shadow:0 12px 35px rgba(8,43,73,.10);
-}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 2px 15px rgba(0,0,0,.06)}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--dark)}
-.brand img{width:55px;height:55px;object-fit:contain}
-.brand-text{font-size:18px;letter-spacing:.5px}
-.brand-text span{display:block;color:var(--green);font-size:11px;font-weight:600;letter-spacing:.7px}
-nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-nav a{font-weight:700;font-size:14px;color:var(--dark)}
-nav a:hover{color:var(--green)}
-.top-wa{background:var(--green);color:#fff;padding:10px 15px;border-radius:24px}
-.hero{min-height:650px;display:grid;place-items:center;text-align:center;color:#fff;
-background:linear-gradient(rgba(4,30,50,.55),rgba(4,30,50,.60)),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-inner{padding:70px 0}
-.hero-logo{width:105px;height:105px;object-fit:contain;background:#fff;border-radius:50%;padding:8px;margin-bottom:15px}
-.hero h1{font-size:clamp(40px,7vw,76px);margin:0 0 8px;letter-spacing:2px}
-.hero p{font-size:clamp(20px,3vw,30px);margin:0 auto 28px;font-weight:600}
-.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 22px;border-radius:30px;font-weight:800;border:2px solid transparent}
-.btn-primary{background:var(--yellow);color:#102b42}
-.btn-green{background:var(--green);color:#fff}
-.btn-outline{border-color:#fff;color:#fff}
-section{padding:78px 0}
-.section-head{text-align:center;margin-bottom:38px}
-.section-head h2{font-size:36px;color:var(--dark);margin:0 0 8px}
-.section-head p{color:var(--muted);max-width:700px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border-radius:18px;padding:28px;box-shadow:var(--shadow);border:1px solid #e7eef2}
-.card h3{margin:12px 0 7px;color:var(--dark)}
-.icon{font-size:36px}
-.alt{background:var(--light)}
-.about{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
-.about-img{width:100%;height:430px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow)}
-.checks{display:grid;gap:12px;margin-top:20px}
-.check{padding:13px 16px;background:#fff;border-left:4px solid var(--green);border-radius:8px;box-shadow:0 5px 18px rgba(0,0,0,.05)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.stat{background:var(--dark);color:#fff;text-align:center;padding:27px;border-radius:16px}
-.stat strong{display:block;font-size:34px;color:var(--yellow)}
-.project img{width:100%;height:220px;object-fit:cover;border-radius:14px}
-.project{padding:15px}
-.team-card{text-align:center}
-.team-card img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:5px solid #e5f3ea}
-.phone{color:var(--green);font-weight:800}
-.offices{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.office{padding:30px;border-radius:18px;background:#fff;box-shadow:var(--shadow);border-top:5px solid var(--green)}
-.office h3{color:var(--dark);margin-top:0}
-.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px;align-items:start}
-.contact-box{background:var(--dark);color:#fff;padding:32px;border-radius:22px}
-.contact-box h3{color:var(--yellow)}
-.form{padding:30px;border-radius:22px;box-shadow:var(--shadow);border:1px solid #e7eef2}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-input,textarea,select{width:100%;padding:14px;border:1px solid #cbd7df;border-radius:10px;font:inherit}
-textarea{min-height:120px;resize:vertical}
-.full{grid-column:1/-1}
-.form button{border:0;cursor:pointer;font-size:16px}
-.video-box{background:linear-gradient(135deg,var(--dark),#126d45);color:#fff;border-radius:24px;padding:55px;text-align:center}
-.video-box h3{font-size:30px;margin:0 0 10px}
-footer{background:#061f34;color:#d9e5ed;padding:35px 0;text-align:center}
-footer img{width:65px;height:65px;object-fit:contain;background:#fff;border-radius:50%;padding:5px}
-.small{font-size:13px;color:#a9bac8}
-@media(max-width:850px){
- nav{display:none}.grid{grid-template-columns:1fr 1fr}.about,.contact{grid-template-columns:1fr}
- .stats{grid-template-columns:1fr 1fr}.offices{grid-template-columns:1fr}
-}
-@media(max-width:560px){
- .grid,.stats,.form-grid{grid-template-columns:1fr}.hero{min-height:590px}
- section{padding:55px 0}.about-img{height:300px}.hero-logo{width:85px;height:85px}
- .brand-text{font-size:15px}.brand-text span{font-size:9px}
-}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:#073d72}
+a{text-decoration:none;color:inherit}.wrap{max-width:1200px;margin:auto;padding:0 24px}
+header{height:88px;background:#fff;display:flex;align-items:center;box-shadow:0 2px 12px #0001;position:sticky;top:0;z-index:10}
+.nav{width:100%;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:12px}.logo img{width:82px;height:68px;object-fit:contain}
+.brand{font-size:34px;font-weight:900}.brand span{color:#f3aa10}.tag{font-size:17px;display:block}
+.menu{display:flex;gap:30px;font-weight:700}.menu a:hover{color:#159447}
+.hero{height:510px;background:url("hero.jpg") center/cover no-repeat;position:relative}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#ffffff00 42%,#ffffffdd 58%,#fffffffa)}
+.hero-content{position:relative;z-index:1;text-align:center;max-width:620px;margin-left:auto;padding-top:45px}.hero-logo{width:100px;height:85px;object-fit:contain}.hero h1{font-size:56px;margin:8px 0;color:#063e73}.hero h1 span{color:#f3aa10}.hero p{font-size:24px;font-weight:600}.pills{display:flex;justify-content:center;gap:38px}.pill{font-weight:700}.pill i{display:block;font-style:normal;font-size:28px;background:#fff;border-radius:50%;padding:10px;margin:auto;width:55px;height:55px;box-shadow:0 2px 12px #0002}
+section{padding:28px 0}.title{text-align:center;font-size:34px;margin:0 0 22px}.title:after{content:"";display:block;width:68px;height:3px;background:#125087;margin:9px auto}
+.service-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.service{background:#f1fbff;text-align:center;box-shadow:0 3px 12px #0a4d7520}.service img{width:100%;height:140px;object-fit:cover}.ico{width:46px;height:46px;border-radius:50%;background:#07508a;color:#fff;display:grid;place-items:center;margin:-23px auto 7px;position:relative;font-size:23px;border:3px solid #fff}.service h3{font-size:17px;margin:4px}.service p{font-size:13px;margin:10px 12px 18px}
+.banner{display:grid;grid-template-columns:1.2fr .8fr 1.1fr;height:280px}.banner img{width:100%;height:280px;object-fit:cover}.banner .words{display:grid;place-items:center;text-align:center;font-size:27px;font-weight:700;font-style:italic;padding:15px;background:#eefaff}
+.lower{display:grid;grid-template-columns:1.15fr 1fr .8fr;background:#eefaff}.lower>div{padding:25px}.lower h2{margin-top:0}.about p{line-height:1.55;font-size:14px}.why{display:flex;gap:8px}.why div{flex:1;text-align:center;border-right:1px solid #bdd0db;font-size:12px}.why div:last-child{border:0}.why span{display:block;font-size:25px}.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.projects-grid img{width:100%;height:75px;object-fit:cover;border-radius:5px}.wa{display:block;background:#2dbb46;color:#fff;border-radius:24px;text-align:center;padding:11px;font-weight:800}.contact-mini p{font-size:14px}
+.team,.offices,.enquiry{padding:45px 0}.team-grid,.office-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:850px;margin:auto}.person,.office{background:#f2fbff;padding:20px;border-radius:12px}.person{display:flex;gap:18px;align-items:center}.person img{width:110px;height:110px;border-radius:50%;object-fit:cover}.office{border-top:4px solid #159447}
+.form{max-width:850px;margin:auto;padding:28px;border-radius:15px;box-shadow:0 5px 25px #0002}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}input,select,textarea{width:100%;padding:13px;border:1px solid #ccd8df;border-radius:8px;font:inherit}textarea{min-height:100px}.submit{background:#159447;color:#fff;border:0;padding:14px 22px;border-radius:25px;font-weight:800}
+.videos{background:#083f72;color:#fff;text-align:center;padding:45px}.video-btn{display:inline-block;background:#f5b719;color:#073d72;padding:12px 22px;border-radius:25px;font-weight:800}
+footer{background:#06365f;color:#fff;text-align:center;padding:22px}.footer-logo{width:60px;height:50px;object-fit:contain;background:#fff;border-radius:50%}
+@media(max-width:900px){.menu{gap:12px;font-size:13px}.service-grid{grid-template-columns:repeat(3,1fr)}.lower{grid-template-columns:1fr 1fr}.contact-mini{grid-column:1/-1}}
+@media(max-width:600px){header{height:72px}.logo img{width:52px;height:48px}.brand{font-size:18px}.tag{font-size:9px}.menu{display:none}.hero{height:500px}.hero:after{background:linear-gradient(#fff0,#ffffffe8 70%)}.hero-content{padding-top:25px}.hero h1{font-size:38px}.hero p{font-size:18px}.pills{gap:10px}.pill{font-size:11px}.service-grid,.team-grid,.office-grid,.fields{grid-template-columns:1fr}.banner{grid-template-columns:1fr;height:auto}.banner img{height:210px}.banner .words{display:none}.lower{grid-template-columns:1fr}.full{grid-column:auto}}
 </style>
 </head>
 <body>
+<header><div class="wrap nav"><a class="logo" href="#home"><img src="logo.png"><div><div class="brand">SURYATEJ <span>SOLAR</span></div><span class="tag">Solar Solutions for Better Tomorrow</span></div></a><nav class="menu"><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#team">Team</a><a href="#contact">Contact</a></nav></div></header>
 
-<header>
-<div class="container nav">
-<a class="brand" href="#home">
-<img src="logo.png" alt="Suryatej Solar Logo">
-<div class="brand-text">SURYATEJ SOLAR<span>Solar Solutions for Better Tomorrow</span></div>
-</a>
-<nav>
-<a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a>
-<a href="#projects">Projects</a><a href="#team">Team</a><a href="#contact">Contact</a>
-<a class="top-wa" href="https://wa.me/918179048933" target="_blank">WhatsApp</a>
-</nav>
-</div>
-</header>
+<section class="hero" id="home"><div class="wrap hero-content"><img class="hero-logo" src="logo.png"><h1>SURYATEJ <span>SOLAR</span></h1><p>Solar Solutions for Better Tomorrow</p><div class="pills"><div class="pill"><i>🌿</i>Clean<br>Energy</div><div class="pill"><i>⚡</i>Lower<br>Electricity Bills</div><div class="pill"><i>✓</i>Sustainable<br>Future</div></div></div></section>
 
-<main>
-<section class="hero" id="home">
-<div class="hero-inner container">
-<img class="hero-logo" src="logo.png" alt="Original Suryatej Solar Logo">
-<h1>SURYATEJ SOLAR</h1>
-<p>Solar Solutions for Better Tomorrow</p>
-<div class="buttons">
-<a class="btn btn-primary" href="#contact">Get Free Quote</a>
-<a class="btn btn-green" href="https://wa.me/918179048933" target="_blank">WhatsApp Us</a>
-<a class="btn btn-outline" href="#videos">Watch Video</a>
-</div>
-</div>
-</section>
+<section id="services"><div class="wrap"><h2 class="title">Our Services</h2><div class="service-grid">
+<div class="service"><img src="service-home.jpg"><div class="ico">⌂</div><h3>Residential<br>Solar Systems</h3><p>Power your home with clean energy.</p></div>
+<div class="service"><img src="service-commercial.jpg"><div class="ico">▦</div><h3>Commercial<br>Solar Solutions</h3><p>Reduce costs and increase efficiency.</p></div>
+<div class="service"><img src="service-pump.jpg"><div class="ico">⚙</div><h3>Solar Pump<br>Systems</h3><p>Reliable solar solutions for agriculture & borewells.</p></div>
+<div class="service"><img src="service-water.jpg"><div class="ico">◉</div><h3>Solar Water<br>Heaters</h3><p>Hot water, naturally and efficiently.</p></div>
+<div class="service"><img src="service-install.jpg"><div class="ico">🔧</div><h3>Installation &<br>Maintenance</h3><p>Expert service for long-lasting performance.</p></div>
+</div></div></section>
 
-<section id="services">
-<div class="container">
-<div class="section-head"><h2>Our Solar Services</h2><p>Reliable solar solutions for homes, businesses, industries and agriculture.</p></div>
-<div class="grid">
-<div class="card"><div class="icon">🏠☀️</div><h3>Residential Solar</h3><p>Rooftop solar solutions designed for homes and families.</p></div>
-<div class="card"><div class="icon">🏢☀️</div><h3>Commercial Solar</h3><p>Solar systems for shops, offices, schools and commercial buildings.</p></div>
-<div class="card"><div class="icon">🏭☀️</div><h3>Industrial Solar</h3><p>Large-scale solar solutions for factories and industrial facilities.</p></div>
-<div class="card"><div class="icon">⚡</div><h3>On-Grid Solar</h3><p>Grid-connected systems for efficient solar power generation.</p></div>
-<div class="card"><div class="icon">🔋☀️</div><h3>Hybrid Solar</h3><p>Solar with battery backup for improved energy availability.</p></div>
-<div class="card"><div class="icon">🛠️</div><h3>Installation & Maintenance</h3><p>Professional installation, service and maintenance support.</p></div>
-</div>
-</div>
-</section>
+<section><div class="wrap banner"><img src="team-tshirts.jpg"><div class="words">Powering Communities with<br>Clean Energy</div><img src="pump-field.jpg"><img src="technician.jpg"></div></section>
 
-<section class="alt" id="about">
-<div class="container about">
-<img class="about-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=85" alt="Solar panels">
-<div>
-<div class="section-head" style="text-align:left;margin-bottom:15px"><h2>About Suryatej Solar</h2></div>
-<p>Suryatej Solar focuses on practical, dependable solar solutions for residential, commercial, industrial and agricultural needs.</p>
-<div class="checks">
-<div class="check">✓ Quality-focused solar solutions</div>
-<div class="check">✓ Professional installation support</div>
-<div class="check">✓ Residential, commercial & industrial expertise</div>
-<div class="check">✓ Customer-focused service</div>
-</div>
-</div>
-</div>
-</section>
+<section class="lower" id="about"><div class="about"><h2>About Us</h2><p>Suryatej Solar is a trusted provider of solar energy solutions, dedicated to delivering clean, sustainable and cost-effective energy for homes, businesses and industries. Our mission is to make solar power accessible and reliable for a brighter future.</p><div class="why"><div><span>🌿</span>Quality<br>Products</div><div><span>👥</span>Skilled<br>Team</div><div><span>🤝</span>Customer<br>Satisfaction</div></div></div>
+<div class="projects" id="projects"><h2>Our Projects</h2><div class="projects-grid"><img src="project-1.jpg"><img src="project-2.jpg"><img src="project-3.jpg"><img src="project-4.jpg"></div></div>
+<div class="contact-mini"><a class="wa" href="https://wa.me/918179048933" target="_blank">WhatsApp Us<br><strong>8179048933</strong></a><p>📞 Apparao<br><strong>9553188844</strong></p><p>📞 Surendra<br><strong>9392557595</strong></p><p>✉️ suryatejsolar@gmail.com</p><p>📍 Andhra Pradesh, India</p></div></section>
 
-<section>
-<div class="container">
-<div class="section-head"><h2>Solar Solutions For Every Need</h2><p>From rooftops to factories and agricultural applications.</p></div>
-<div class="grid">
-<div class="card project"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1000&q=85" alt="House rooftop solar"><h3>Homes</h3><p>Clean rooftop solar for residential electricity needs.</p></div>
-<div class="card project"><img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1000&q=85" alt="Solar installation"><h3>Companies & Factories</h3><p>Solar installations for commercial and industrial energy requirements.</p></div>
-<div class="card project"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1000&q=85" alt="Solar panels in agricultural landscape"><h3>Agriculture</h3><p>Solar power applications for agricultural energy requirements.</p></div>
-</div>
-</div>
-</section>
+<section class="team" id="team"><div class="wrap"><h2 class="title">Our Team</h2><div class="team-grid">
+<div class="person"><img src="person1.jpg" onerror="this.style.display='none'"><div><h3>గుడివాడ అప్పారావు</h3><a href="tel:9553188844">📞 9553188844</a><p>Head Office</p></div></div>
+<div class="person"><img src="person2.jpeg" onerror="this.style.display='none'"><div><h3>గోతిరెడ్డి సురేంద్ర</h3><a href="tel:9392557595">📞 9392557595</a><p>Branch Office</p></div></div>
+</div></div></section>
 
-<section class="alt">
-<div class="container">
-<div class="stats">
-<div class="stat"><strong>6+</strong>Solar Services</div>
-<div class="stat"><strong>2</strong>Office Locations</div>
-<div class="stat"><strong>24/7</strong>Enquiry Access</div>
-<div class="stat"><strong>100%</strong>Customer Focus</div>
-</div>
-</div>
-</section>
+<section class="offices"><div class="wrap"><h2 class="title">Our Offices</h2><div class="office-grid">
+<div class="office"><h3>Head Office – Chodavaram</h3><p><b>Door No. 18-57/3</b><br>Walkers Club ఎదురుగా<br>Lakshmipuram Road, Chodavaram<br>Anakapalli District – 531036</p></div>
+<div class="office"><h3>Branch Office – Samarlakota</h3><p>Main Road, Post Office Opp. Line<br><b>D.No: 11-2-3/4</b><br>Gayitri Xerox Shop<br>Samarlakota</p></div>
+</div></div></section>
 
-<section>
-<div class="container">
-<div class="section-head"><h2>Why Choose Suryatej Solar?</h2></div>
-<div class="grid">
-<div class="card"><div class="icon">☀️</div><h3>Solar Expertise</h3><p>Solutions planned around your power requirements.</p></div>
-<div class="card"><div class="icon">🔧</div><h3>Installation Support</h3><p>Careful installation and service support.</p></div>
-<div class="card"><div class="icon">🤝</div><h3>Customer Support</h3><p>Easy communication for enquiries and service needs.</p></div>
-</div>
-</div>
-</section>
+<section class="videos"><h2>🎥 Suryatej Solar Videos</h2><p>YouTube links will be added later.</p><a class="video-btn" href="#contact">Get a Solar Quote</a></section>
 
-<section id="projects" class="alt">
-<div class="container">
-<div class="section-head"><h2>Our Work</h2><p>Representative solar applications. Actual project photographs can be added later.</p></div>
-<div class="grid">
-<div class="card project"><img src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=1000&q=85" alt="Rooftop solar panels"><h3>Residential Rooftop</h3></div>
-<div class="card project"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85" alt="Large solar panels"><h3>Commercial / Industrial</h3></div>
-<div class="card project"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1000&q=85" alt="Solar energy field"><h3>Agricultural Solar</h3></div>
-</div>
-</div>
-</section>
+<section class="enquiry" id="contact"><div class="wrap"><h2 class="title">Solar Enquiry</h2><form class="form" id="form"><div class="fields"><input id="name" required placeholder="Your Name"><input id="mobile" required type="tel" placeholder="Mobile Number"><select id="req"><option>Residential Solar</option><option>Commercial Solar</option><option>Industrial Solar</option><option>On-Grid Solar</option><option>Hybrid Solar</option><option>Agricultural / Borewell Pump</option><option>Other</option></select><input id="location" placeholder="City / Village"><textarea id="msg" class="full" placeholder="Your requirement"></textarea><div class="full"><button class="submit" type="submit">Send Enquiry on WhatsApp</button></div></div></form></div></section>
 
-<section id="videos">
-<div class="container">
-<div class="video-box">
-<h3>🎥 Suryatej Solar Videos</h3>
-<p>YouTube videos will be added here in the next update.</p>
-<a class="btn btn-primary" href="#contact">Contact Us</a>
-</div>
-</div>
-</section>
-
-<section id="team">
-<div class="container">
-<div class="section-head"><h2>Our Team</h2><p>Connect directly with our representatives.</p></div>
-<div class="grid">
-<div class="card team-card">
-<img src="person1.jpg" alt="Gudivada Apparao">
-<h3>గుడివాడ అప్పారావు</h3>
-<p class="phone">📞 9553188844</p>
-<p>Head Office</p>
-</div>
-<div class="card team-card">
-<img src="person2.jpeg" alt="Gotireddy Surendra">
-<h3>గోతిరెడ్డి సురేంద్ర</h3>
-<p class="phone">📞 9392557595</p>
-<p>Branch Office</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="alt">
-<div class="container">
-<div class="section-head"><h2>Our Offices</h2></div>
-<div class="offices">
-<div class="office">
-<h3>Head Office – Chodavaram</h3>
-<p><strong>Door No. 18-57/3</strong><br>
-Walkers Club ఎదురుగా<br>
-Lakshmipuram Road, Chodavaram<br>
-Anakapalli District – 531036</p>
-<p>📞 <strong>9553188844</strong></p>
-</div>
-<div class="office">
-<h3>Branch Office – Samarlakota</h3>
-<p>Main Road, Post Office Opp. Line<br>
-<strong>D.No: 11-2-3/4</strong><br>
-Gayitri Xerox Shop<br>
-Samarlakota</p>
-<p>📞 <strong>9392557595</strong></p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container contact">
-<div class="contact-box">
-<h3>Get In Touch</h3>
-<h2>Start Your Solar Journey</h2>
-<p>Send your requirement and we will contact you.</p>
-<p>📞 <strong>9553188844</strong></p>
-<p>💬 <strong>8179048933</strong></p>
-<a class="btn btn-primary" href="https://wa.me/918179048933" target="_blank">Chat on WhatsApp</a>
-</div>
-
-<form class="form" id="enquiryForm">
-<h2>Solar Enquiry</h2>
-<div class="form-grid">
-<div><label>Name</label><input id="name" required placeholder="Your name"></div>
-<div><label>Mobile</label><input id="mobile" required type="tel" placeholder="Mobile number"></div>
-<div><label>Requirement</label>
-<select id="requirement">
-<option>Residential Solar</option><option>Commercial Solar</option><option>Industrial Solar</option>
-<option>On-Grid Solar</option><option>Hybrid Solar</option><option>Agricultural Solar</option><option>Other</option>
-</select></div>
-<div><label>Location</label><input id="location" placeholder="City / Village"></div>
-<div class="full"><label>Message</label><textarea id="message" placeholder="Tell us about your solar requirement"></textarea></div>
-<div class="full"><button class="btn btn-green" type="submit">Send Enquiry on WhatsApp</button></div>
-</div>
-</form>
-</div>
-</section>
-</main>
-
-<footer>
-<img src="logo.png" alt="Suryatej Solar Logo">
-<h3>SURYATEJ SOLAR</h3>
-<p>Solar Solutions for Better Tomorrow</p>
-<p class="small">YouTube • Gmail • WhatsApp • Instagram • Facebook links will be added in a future update.</p>
-<p class="small">© 2026 Suryatej Solar. All rights reserved.</p>
-</footer>
-
+<footer><img class="footer-logo" src="logo.png"><div>Suryatej Solar | Solar Solutions for Better Tomorrow</div><small>YouTube • Gmail • WhatsApp • Instagram • Facebook links will be added later.</small></footer>
 <script>
-document.getElementById("enquiryForm").addEventListener("submit",function(e){
-  e.preventDefault();
-  const name=document.getElementById("name").value.trim();
-  const mobile=document.getElementById("mobile").value.trim();
-  const requirement=document.getElementById("requirement").value;
-  const location=document.getElementById("location").value.trim();
-  const message=document.getElementById("message").value.trim();
-  const text =
-    "SURYATEJ SOLAR ENQUIRY%0A%0A"+
-    "Name: "+encodeURIComponent(name)+"%0A"+
-    "Mobile: "+encodeURIComponent(mobile)+"%0A"+
-    "Requirement: "+encodeURIComponent(requirement)+"%0A"+
-    "Location: "+encodeURIComponent(location)+"%0A"+
-    "Message: "+encodeURIComponent(message);
-  window.open("https://wa.me/918179048933?text="+text,"_blank");
-});
+document.getElementById("form").addEventListener("submit",function(e){e.preventDefault();let t="SURYATEJ SOLAR ENQUIRY\n\nName: "+name.value+"\nMobile: "+mobile.value+"\nRequirement: "+req.value+"\nLocation: "+location.value+"\nMessage: "+msg.value;window.open("https://wa.me/918179048933?text="+encodeURIComponent(t),"_blank")});
 </script>
-</body>
-</html>
+</body></html>
