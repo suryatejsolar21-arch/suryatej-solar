@@ -989,51 +989,139 @@ footer strong{
      PROJECT GALLERY
 ========================= -->
 
-<section class="gallery-section">
+.gallery-section {
+  background: #f1faf6;
+  padding: 70px 20px;
+}
 
-  <div class="container">
+.gallery-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    <h2 class="section-title">
-      Solar <span>Gallery</span>
-    </h2>
+.gallery-section .section-title {
+  text-align: center;
+  color: #064b7a;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
 
-    <p class="section-subtitle">
-      Our solar solutions, installations and project highlights.
-    </p>
+.gallery-section .section-title span {
+  color: #f5a800;
+}
 
-    <div class="gallery-layout">
+.gallery-section .section-subtitle {
+  text-align: center;
+  color: #71808c;
+  margin-bottom: 40px;
+}
 
-      <!-- LEFT COLUMN -->
-      <div class="gallery-left">
+/* MAIN LAYOUT */
 
-        <!-- PHOTO 1 -->
-        <div class="gallery-item gallery-photo-1">
-          <img src="projects.png" alt="Solar Project">
-        </div>
+.gallery-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
 
-        <!-- EMPTY SPACE -->
-        <div class="gallery-empty"></div>
+/* LEFT COLUMN */
 
-      </div>
+.gallery-left {
+  display: grid;
+  grid-template-rows: 280px 180px;
+  gap: 20px;
+}
 
-      <!-- PHOTO 2 -->
-      <div class="gallery-item gallery-tall">
-        <img src="suryatej-poster-01-4k.jpg"
-             alt="Suryatej Solar Project">
-      </div>
+/* COMMON IMAGE BOX */
 
-      <!-- PHOTO 3 -->
-      <div class="gallery-item gallery-tall">
-        <img src="suryatej-poster-02-4k.jpg"
-             alt="Suryatej Solar Installation">
-      </div>
+.gallery-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+}
 
-    </div>
+/* PHOTO 1 */
 
-  </div>
+.gallery-photo-1 {
+  width: 100%;
+  height: 280px;
+}
 
-</section>
+.gallery-photo-1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
 
+/* EMPTY BOX */
+
+.gallery-empty {
+  width: 100%;
+  height: 180px;
+  background: transparent;
+}
+
+/* PHOTO 2 & PHOTO 3 */
+
+.gallery-tall {
+  width: 100%;
+  height: 480px;
+}
+
+.gallery-tall img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* HOVER */
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .gallery-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-left {
+    display: block;
+  }
+
+  .gallery-photo-1 {
+    height: auto;
+  }
+
+  .gallery-photo-1 img {
+    height: auto;
+  }
+
+  .gallery-empty {
+    display: none;
+  }
+
+  .gallery-tall {
+    height: auto;
+  }
+
+  .gallery-tall img {
+    height: auto;
+  }
+
+}
 <!-- =========================
      CONTACT
 ========================= -->
