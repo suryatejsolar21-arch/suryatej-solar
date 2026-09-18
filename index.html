@@ -109,6 +109,8 @@ nav a:hover{
 .hero{
   width:100%;
   background:#eef8f1;
+  padding:0 !important;
+  margin:0;
 }
 
 .hero img{
@@ -495,6 +497,72 @@ footer p{
     grid-template-columns:1fr;
   }
 }
+
+
+/* IMAGE GALLERY */
+.about-photo,
+.about-photo img{
+  width:100%;
+  display:block;
+}
+
+.about-photo img{
+  height:360px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 8px 28px rgba(0,0,0,.10);
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.project-card{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 5px 22px rgba(0,0,0,.08);
+  border-top:4px solid #159447;
+}
+
+.project-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.project-card h3{
+  padding:16px 18px 4px;
+  color:#073b67;
+}
+
+.project-card p{
+  padding:0 18px 18px;
+  color:#657483;
+}
+
+@media(max-width:900px){
+  .services,.projects-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:650px){
+  .services,.projects-grid{grid-template-columns:1fr}
+  .nav{min-height:72px}
+  nav{gap:10px}
+  nav a:not(.whatsapp){display:none}
+  .brand-name{font-size:18px}
+  .brand img{width:50px;height:48px}
+  .hero-actions{padding:18px 12px}
+  .btn{padding:12px 18px;font-size:14px}
+  section{padding:55px 0}
+  .section-title{font-size:29px}
+  .about-photo img{height:260px}
+}
+
 </style>
 </head>
 
@@ -561,134 +629,84 @@ footer p{
 
 <!-- SERVICES -->
 <section id="services">
-
   <div class="container">
-
-    <h2 class="section-title">
-      Our <span>Services</span>
-    </h2>
-
-    <p class="section-subtitle">
-      Complete solar power solutions for homes, businesses,
-      industries and agricultural applications.
-    </p>
+    <h2 class="section-title">Our <span>Services</span></h2>
+    <p class="section-subtitle">Complete solar power solutions for homes, businesses, industries and agricultural applications.</p>
 
     <div class="services">
-
       <div class="card">
-       <img src="02.png" alt="Residential Solar">
+        <img src="02.png" alt="Residential Solar">
         <h3>Residential Solar</h3>
-        <p>
-          Reliable solar power solutions for homes
-          designed to reduce electricity costs.
-        </p>
+        <p>Reliable solar power solutions for homes designed to reduce electricity costs.</p>
       </div>
 
       <div class="card">
-        <img src="commercial.png" alt="Commercial Solar">
+        <img src="06.png" alt="Commercial Solar">
         <h3>Commercial Solar</h3>
-        <p>
-          Efficient rooftop and commercial solar
-          systems for businesses and offices.
-        </p>
+        <p>Efficient rooftop and commercial solar systems for businesses and offices.</p>
       </div>
 
       <div class="card">
         <img src="industrial.png" alt="Industrial Solar">
         <h3>Industrial Solar</h3>
-        <p>
-          High-performance solar solutions for
-          factories and industrial facilities.
-        </p>
+        <p>High-performance solar solutions for factories and industrial facilities.</p>
       </div>
 
       <div class="card">
-        <h3>On-Grid Solar</h3>
-        <p>
-          Grid-connected solar systems for
-          efficient power generation and savings.
-        </p>
+        <img src="05.png" alt="Agriculture Solar Pump">
+        <h3>Agriculture Solar</h3>
+        <p>Solar-powered pumping solutions for agricultural and farming requirements.</p>
       </div>
 
       <div class="card">
-        <h3>Hybrid Solar</h3>
-        <p>
-          Solar and battery solutions for reliable
-          power availability.
-        </p>
+        <img src="03.png" alt="Agriculture Solar Solutions">
+        <h3>Solar Pump Solutions</h3>
+        <p>Clean solar power solutions designed to support reliable agricultural water pumping.</p>
       </div>
 
       <div class="card">
-        <h3>Installation & Maintenance</h3>
-        <p>
-          Professional installation, service and
-          maintenance for long-term performance.
-        </p>
+        <img src="04.png" alt="Solar Installation Team">
+        <h3>Installation &amp; Maintenance</h3>
+        <p>Professional installation, service and maintenance for long-term system performance.</p>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-
   <div class="container">
-
-    <h2 class="section-title">
-      About <span>Suryatej Solar</span>
-    </h2>
+    <h2 class="section-title">About <span>Suryatej Solar</span></h2>
 
     <div class="about-grid">
+      <div class="about-photo">
+        <img src="suryatej-office-4k.jpg" alt="Suryatej Solar Office">
+      </div>
 
       <div class="about-box">
-
         <h3>Solar Solutions for Better Tomorrow</h3>
-
-        <p>
-          Suryatej Solar provides solar energy solutions
-          for residential, commercial, industrial and
-          agricultural requirements.
-        </p>
-
-        <p>
-          Our focus is on dependable solar systems,
-          professional installation and long-term customer support.
-        </p>
-
+        <p>Suryatej Solar provides solar energy solutions for residential, commercial, industrial and agricultural requirements.</p>
+        <p>Our focus is on dependable solar systems, professional installation and long-term customer support.</p>
         <ul class="about-list">
           <li>Quality Solar Solutions</li>
           <li>Professional Installation</li>
           <li>Customer Support</li>
           <li>Energy Cost Savings</li>
         </ul>
-
       </div>
-
-      <div class="about-box">
-
-        <h3>Why Solar Energy?</h3>
-
-        <p>
-          Solar energy helps households, businesses and
-          agricultural users generate clean electricity
-          from sunlight.
-        </p>
-
-        <p>
-          With the right solar system, customers can
-          reduce dependence on conventional electricity
-          and make use of renewable energy.
-        </p>
-
-      </div>
-
     </div>
 
+    <div class="about-grid" style="margin-top:30px;">
+      <div class="about-box">
+        <h3>Why Solar Energy?</h3>
+        <p>Solar energy helps households, businesses and agricultural users generate clean electricity from sunlight.</p>
+        <p>With the right solar system, customers can reduce dependence on conventional electricity and make use of renewable energy.</p>
+      </div>
+      <div class="about-photo">
+        <img src="suryatej-team-4k.jpg" alt="Suryatej Solar Team">
+      </div>
+    </div>
   </div>
-
 </section>
 
 <!-- STATS -->
@@ -775,25 +793,43 @@ footer p{
 
 <!-- PROJECTS -->
 <section id="projects" class="about">
-
   <div class="container">
+    <h2 class="section-title">Our <span>Projects</span></h2>
+    <p class="section-subtitle">Residential, commercial, industrial and agricultural solar installations.</p>
 
-    <h2 class="section-title">
-      Our <span>Projects</span>
-    </h2>
-
-    <p class="section-subtitle">
-      Residential, commercial, industrial and agricultural
-      solar installations.
-    </p>
-
-    <div class="projects">
-
-      <img src="projects.png" alt="Suryatej Solar Projects" style="width:100%; border-radius:16px; display:block;">
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="02.png" alt="Residential Solar Project">
+        <h3>Residential Project</h3>
+        <p>Solar solution for a modern home.</p>
+      </div>
+      <div class="project-card">
+        <img src="06.png" alt="Commercial Solar Project">
+        <h3>Commercial Project</h3>
+        <p>Rooftop solar for commercial and factory facilities.</p>
+      </div>
+      <div class="project-card">
+        <img src="industrial.png" alt="Industrial Solar Project">
+        <h3>Industrial Project</h3>
+        <p>Large-scale solar installation for industrial use.</p>
+      </div>
+      <div class="project-card">
+        <img src="05.png" alt="Agriculture Solar Pump Project">
+        <h3>Agriculture Project</h3>
+        <p>Solar-powered agricultural pumping solution.</p>
+      </div>
+      <div class="project-card">
+        <img src="04.png" alt="Solar Installation Project">
+        <h3>Installation Work</h3>
+        <p>Professional solar panel installation work.</p>
+      </div>
+      <div class="project-card">
+        <img src="7.png" alt="Suryatej Solar Project Photos">
+        <h3>Project Gallery</h3>
+        <p>Solar installations and project highlights.</p>
+      </div>
     </div>
-
   </div>
-
 </section>
 
 <!-- VIDEOS -->
