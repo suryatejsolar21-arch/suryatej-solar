@@ -984,7 +984,87 @@ footer strong{
 </div>
 
 </section>
+  
+<!-- =========================
+     PROJECT GALLERY
+========================= -->
+  
+  <style>
 
+.gallery-section {
+  background: #f1faf6;
+  padding: 60px 20px;
+}
+
+.gallery-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-section .section-title {
+  text-align: center;
+  color: #064b7a;
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+
+.gallery-section .section-title span {
+  color: #f5a800;
+}
+
+.gallery-section .section-subtitle {
+  text-align: center;
+  color: #71808c;
+  margin: 0 0 35px;
+}
+
+/* 3 COLUMNS */
+
+.gallery-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* IMAGE BOX */
+
+.gallery-item {
+  height: 330px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+
+/* IMAGE */
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .gallery-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 280px;
+  }
+
+}
+
+</style>
 <!-- =========================
      CONTACT
 ========================= -->
@@ -1023,50 +1103,6 @@ footer strong{
   </div>
 
 </div>
-
-</section>
-<!-- =========================
-     PROJECT GALLERY
-========================= -->
-
-<section class="gallery-section">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Solar <span>Gallery</span>
-    </h2>
-
-    <p class="section-subtitle">
-      Our solar solutions, installations and project highlights.
-    </p>
-
-    <div class="gallery-layout">
-
-      <!-- LEFT: PHOTO 1 + EMPTY -->
-      <div class="gallery-left">
-
-        <div class="gallery-item gallery-photo-1">
-          <img src="projects.png" alt="Solar Project">
-        </div>
-
-        <div class="gallery-empty"></div>
-
-      </div>
-
-      <!-- MIDDLE: PHOTO 2 -->
-      <div class="gallery-item gallery-tall">
-        <img src="suryatej-poster-01-4k.jpg" alt="Suryatej Solar Project">
-      </div>
-
-      <!-- RIGHT: PHOTO 3 -->
-      <div class="gallery-item gallery-tall">
-        <img src="suryatej-poster-02-4k.jpg" alt="Suryatej Solar Installation">
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
