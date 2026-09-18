@@ -403,17 +403,22 @@ section{
 
 .gallery{
   display:grid;
-  grid-template-columns:1fr;
-  gap:25px;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .gallery img{
   width:100%;
-  height:auto;
+  height:280px;
+  object-fit:cover;
   display:block;
   border-radius:15px;
   box-shadow:0 6px 20px rgba(0,0,0,0.1);
   transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.02);
 }
 
 .gallery img:hover{
@@ -424,9 +429,6 @@ section{
    CONTACT
 ========================= */
 
-.contact-section{
-  background:#073b67;
-  color:#ffffff;
 }
 
 .contact-section .section-title{
